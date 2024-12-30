@@ -39,7 +39,7 @@ class Program
 				toplamOrtalama += ortalama;
 
 				if (ortalama > enYuksek) enYuksek = ortalama;
-				if (ortalama < enDusuk) enDusuk = ortalama;
+				else if (ortalama < enDusuk) enDusuk = ortalama;
 
 				Console.WriteLine($"Ortalama: {ortalama:0.00}, Harf Notu: {harfnotu(ortalama)}");
 			}
@@ -89,13 +89,13 @@ class Program
 	static string harfnotu(double ortalama)
 	{
 		if (ortalama >= 85) return "AA";
-		if (ortalama >= 75) return "BA";
-		if (ortalama >= 60) return "BB";
-		if (ortalama >= 50) return "CB";
-		if (ortalama >= 40) return "CC";
-		if (ortalama >= 30) return "DC";
-		if (ortalama >= 20) return "DD";
-		if (ortalama >= 10) return "FD";
+		else (ortalama >= 75) return "BA";
+		else (ortalama >= 60) return "BB";
+		else (ortalama >= 50) return "CB";
+		else (ortalama >= 40) return "CC";
+		else (ortalama >= 30) return "DC";
+		else (ortalama >= 20) return "DD";
+		else if (ortalama >= 10) return "FD";
 		return "FF";
 
 
